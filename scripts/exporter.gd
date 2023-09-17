@@ -9,54 +9,58 @@ var matcont = "" #.mat content
 
 var model = []
 var prev_model = []
+var voxel_scale = 0.1
 
 func update_model():
-	var voxel_scale = 0.1
-	
 	for child in get_children():
 		child.queue_free()
 	
 	for i in model:
-		var voxel = CSGBox.new()
-		#Transforms
-		voxel.width = voxel_scale
-		voxel.height = voxel_scale
-		voxel.depth = voxel_scale
-		voxel.global_translation = Vector3(i[0]*voxel_scale, i[1]*voxel_scale, i[2]*voxel_scale)
-		# Material
-		var voxel_material = SpatialMaterial.new()
-		voxel_material.albedo_color = Color(i[3],i[4],i[5])
-		voxel.material = voxel_material
-		
-		add_child(voxel)
-
+		create_voxel(Vector3(i[0]*voxel_scale, i[1]*voxel_scale, i[2]*voxel_scale), Color(i[3],i[4],i[5]))
+func create_voxel(pos: Vector3, color: Color):
+	var voxel = CSGBox.new()
+	#Transforms
+	voxel.width = voxel_scale
+	voxel.height = voxel_scale
+	voxel.depth = voxel_scale
+	voxel.global_translation = pos
+	# Material
+	var voxel_material = SpatialMaterial.new()
+	voxel_material.albedo_color = color
+	voxel.material = voxel_material
+	add_child(voxel)
 func add_voxel(pos: Vector3, color:Color):
 	prev_model = []
 	prev_model.append_array(model)
 	
+	create_voxel(pos*voxel_scale, color)
 	model.append([pos.x, pos.y, pos.z, color.r, color.g, color.b])
-	update_model()
-
-func remove_voxel(pos: Vector3):
-	if get_voxel(pos) != null:
-		model.remove(get_voxel(pos))
-		update_model()
 	
-func get_voxel(pos: Vector3):
+	
+	
+	#update_model()
+func remove_voxel(pos: Vector3) -> void:
+	if get_voxel_in_model(pos) != null:
+		model.remove(get_voxel_in_model(pos))
+		get_voxel_in_pos(pos).queue_free()
+		#update_model()
+func get_voxel_in_pos(pos: Vector3):
+	for i in get_children():
+		var i_pos = i.translation
+		if i_pos == pos*voxel_scale:
+			return i
+func get_voxel_in_model(pos: Vector3):
 	var index = 0
 	for i in model:
 		var i_pos = Vector3(i[0], i[1], i[2])
 		if i_pos == pos:
 			return(index)
 		index += 1
-
 func undo():
 	model = prev_model
 	update_model()
-
 func _input(event):
 	if Input.is_action_just_pressed("undo"): undo()
-
 func _ready():
 	update_model()
 	obj = self
