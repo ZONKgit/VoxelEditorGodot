@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wireframe.obj-0e54ce55c18ee0e8b581005f59483ad6.mesh"
+
+[deps]
+
+files=[ "res://.import/wireframe.obj-0e54ce55c18ee0e8b581005f59483ad6.mesh" ]
+
+source_file="res://assets/models/wireframe.obj"
+dest_files=[ "res://.import/wireframe.obj-0e54ce55c18ee0e8b581005f59483ad6.mesh", "res://.import/wireframe.obj-0e54ce55c18ee0e8b581005f59483ad6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

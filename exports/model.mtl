@@ -1,0 +1,792 @@
+newmtl [SpatialMaterial:130798]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130800]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130802]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130804]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130806]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130808]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130810]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130814]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130816]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130818]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130820]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130822]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130824]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130826]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130830]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130832]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130834]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130836]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130838]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130840]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130842]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130844]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130846]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130848]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130850]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130852]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130854]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130856]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130858]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130860]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130862]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130864]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130866]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130868]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130870]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130872]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130874]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130876]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130878]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130880]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130882]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130884]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130886]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130888]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130890]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130894]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130896]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130898]
+Kd 0.729412 0.435294 0.086275
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130900]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130902]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130904]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130906]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130908]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130910]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130912]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130914]
+Kd 0 0 0
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130916]
+Kd 0 0 0
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130918]
+Kd 0 0 0
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130920]
+Kd 1 1 1
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130922]
+Kd 1 1 1
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130924]
+Kd 1 1 1
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130926]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130928]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130930]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130934]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130936]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130938]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130942]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130944]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130946]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130950]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130952]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130954]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130956]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130958]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130960]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130962]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130964]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130966]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130968]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130970]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130972]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130976]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130978]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130980]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130982]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130984]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130986]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130988]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130990]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130992]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130994]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130996]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:130998]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131000]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131002]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131004]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131006]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131008]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131010]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131012]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131014]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131016]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131018]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131020]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131022]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131024]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131026]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131028]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131030]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131032]
+Kd 0 0 0
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131034]
+Kd 0 0 0
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131036]
+Kd 0 0 0
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131038]
+Kd 0 0 0
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131040]
+Kd 1 1 1
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131042]
+Kd 1 1 1
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131044]
+Kd 1 1 1
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131046]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131048]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131050]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131052]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131054]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131056]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131058]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131060]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131062]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131064]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131066]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131070]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131076]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131078]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131080]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131082]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131084]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131086]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131088]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131090]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131092]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131096]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131098]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131100]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131102]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131104]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131108]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131110]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131112]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131114]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131116]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131118]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131120]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131122]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131124]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131126]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131128]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131130]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131132]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131134]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131136]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131138]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131140]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131142]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131144]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131146]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131148]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131150]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131152]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131154]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131156]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131158]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131160]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131162]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131164]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131168]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131170]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131172]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131174]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131176]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131178]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131180]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131182]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131184]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131186]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131188]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131190]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131192]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131194]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131196]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131198]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131200]
+Kd 0.196078 0.607843 0.12549
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131202]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131204]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131206]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131208]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131210]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131212]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131214]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131216]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:131218]
+Kd 0.12549 0.133333 0.607843
+Ke 0 0 0
+d 1
