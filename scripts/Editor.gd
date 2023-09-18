@@ -31,6 +31,8 @@ func _input(e) -> void:
 						model.add_voxel(new_voxel_pos*10, voxel_color)
 					"Erase":
 						model.remove_voxel(voxel_pos*10)
+					"Paint":
+						model.paint_voxel(voxel_pos*10, voxel_color)
 						
 			if cursor_position:  _emit_cursor_position(cursor_position, cursor_normal)
 		else: $cursor.translation = Vector3(0,255,0)

@@ -25,10 +25,13 @@ func create_voxel(pos: Vector3, color: Color):
 	voxel.depth = voxel_scale
 	voxel.global_translation = pos
 	# Material
+	apply_color_to_voxel(voxel, color)
+	add_child(voxel)
+func apply_color_to_voxel(voxel: CSGBox, color: Color) -> void:
+	# Material
 	var voxel_material = SpatialMaterial.new()
 	voxel_material.albedo_color = color
 	voxel.material = voxel_material
-	add_child(voxel)
 func add_voxel(pos: Vector3, color:Color):
 	prev_model = []
 	prev_model.append_array(model)
@@ -42,9 +45,17 @@ func add_voxel(pos: Vector3, color:Color):
 func remove_voxel(pos: Vector3) -> void:
 	if get_voxel_in_model(pos) != null:
 		model.remove(get_voxel_in_model(pos))
-		get_voxel_in_pos(pos).queue_free()
+		get_voxel_in_tree(pos).queue_free()
 		#update_model()
-func get_voxel_in_pos(pos: Vector3):
+func paint_voxel(pos: Vector3, color: Color) -> void:
+	if get_voxel_in_model(pos) == null: return
+	var index = model[get_voxel_in_model(pos)]
+	index[3] = color.r
+	index[4] = color.g 
+	index[5] = color.b
+	apply_color_to_voxel(get_voxel_in_tree(pos), color)
+
+func get_voxel_in_tree(pos: Vector3):
 	for i in get_children():
 		var i_pos = i.translation
 		if i_pos == pos*voxel_scale:

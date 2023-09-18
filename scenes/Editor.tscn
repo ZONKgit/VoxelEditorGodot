@@ -339,6 +339,8 @@ material/0 = SubResource( 6 )
 use_collision = true
 script = ExtResource( 2 )
 
+[node name="CSGBox" type="CSGBox" parent="model"]
+
 [node name="GUI" type="CanvasLayer" parent="."]
 script = ExtResource( 4 )
 
@@ -397,6 +399,16 @@ margin_top = 48.0
 margin_right = 53.0
 margin_bottom = 68.0
 text = "Paint"
+
+[node name="reload_model_button" type="Button" parent="GUI/ui/left_panel"]
+anchor_left = 0.0670391
+anchor_top = 0.833333
+anchor_right = 0.899441
+anchor_bottom = 0.891667
+text = "Reload model"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="right_panel" type="Panel" parent="GUI/ui"]
 anchor_left = 1.0
@@ -476,6 +488,8 @@ shape = SubResource( 11 )
 [connection signal="color_changed" from="GUI/ui/left_panel/select_color_container/voxel_color_picker" to="GUI" method="_on_voxel_color_picker_color_changed"]
 [connection signal="pressed" from="GUI/ui/left_panel/brush_mode_buttons/attach_mode_button" to="GUI" method="_on_attach_mode_button_pressed"]
 [connection signal="pressed" from="GUI/ui/left_panel/brush_mode_buttons/erase_mode_button" to="GUI" method="_on_erase_mode_button_pressed"]
+[connection signal="pressed" from="GUI/ui/left_panel/brush_mode_buttons/paint_mode_button" to="GUI" method="_on_paint_mode_button_pressed"]
+[connection signal="pressed" from="GUI/ui/left_panel/reload_model_button" to="GUI" method="_on_reload_model_button_pressed"]
 [connection signal="pressed" from="GUI/ui/right_panel/export_button" to="model" method="exportcsg"]
 [connection signal="item_selected" from="GUI/ui/up_panel/buttons/selectViewMode" to="GUI" method="_on_selectViewMode_item_selected"]
 [connection signal="toggled" from="GUI/ui/up_panel/buttons/is_outline" to="GUI" method="_on_is_outline_toggled"]

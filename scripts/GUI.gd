@@ -39,3 +39,11 @@ func _on_attach_mode_button_pressed():
 
 func _on_erase_mode_button_pressed():
 	editor.brush_mode = "Erase"
+
+
+func _on_paint_mode_button_pressed():
+	editor.brush_mode =  "Paint"
+
+
+func _on_reload_model_button_pressed():
+	model.update_model()
