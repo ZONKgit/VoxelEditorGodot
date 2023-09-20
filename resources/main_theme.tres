@@ -1,0 +1,59 @@
+[gd_resource type="Theme" load_steps=10 format=2]
+
+[ext_resource path="res://resources/fonts/main_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/icons/switch_on.png" type="Texture" id=2]
+[ext_resource path="res://assets/icons/switch_off.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.239216, 0.352941, 0.501961, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_size = 1
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.239216, 0.352941, 0.501961, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_size = 1
+shadow_offset = Vector2( 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.239216, 0.352941, 0.501961, 0.498039 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_size = 1
+shadow_offset = Vector2( 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.239216, 0.352941, 0.501961, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_size = 1
+shadow_offset = Vector2( 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.160784, 0.196078, 0.254902, 1 )
+
+[resource]
+Button/fonts/font = ExtResource( 1 )
+Button/styles/hover = SubResource( 4 )
+Button/styles/normal = SubResource( 1 )
+Button/styles/pressed = SubResource( 5 )
+CheckButton/icons/off = ExtResource( 3 )
+CheckButton/icons/on = ExtResource( 2 )
+CheckButton/styles/normal = SubResource( 6 )
+Label/fonts/font = ExtResource( 1 )
+Label/styles/normal = SubResource( 2 )
+Panel/styles/panel = SubResource( 3 )

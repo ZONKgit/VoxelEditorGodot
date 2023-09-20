@@ -1,0 +1,122 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resources/main_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/fonts/Comfortaa-VariableFont_wght.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/color_picker.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+font_data = ExtResource( 2 )
+
+[node name="color_picker" type="Panel"]
+margin_top = -147.0
+margin_right = 362.0
+theme = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="color_preview" type="ColorRect" parent="."]
+anchor_left = 0.0347222
+anchor_top = 0.0869565
+anchor_right = 0.638889
+anchor_bottom = 0.434783
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="color_sliders_box" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = -68.0
+margin_right = 241.0
+margin_bottom = 1.0
+
+[node name="r_container" type="HBoxContainer" parent="color_sliders_box"]
+margin_right = 231.0
+margin_bottom = 18.0
+
+[node name="Label" type="Label" parent="color_sliders_box/r_container"]
+margin_top = -1.0
+margin_right = 10.0
+margin_bottom = 17.5
+text = "R"
+
+[node name="r_slider" type="HSlider" parent="color_sliders_box/r_container"]
+margin_left = 14.0
+margin_right = 189.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 175, 0 )
+max_value = 255.0
+
+[node name="value" type="Label" parent="color_sliders_box/r_container"]
+margin_left = 193.0
+margin_top = -1.0
+margin_right = 223.0
+margin_bottom = 17.5
+text = "255"
+
+[node name="g_container" type="HBoxContainer" parent="color_sliders_box"]
+margin_top = 22.0
+margin_right = 231.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="color_sliders_box/g_container"]
+margin_top = -1.0
+margin_right = 13.0
+margin_bottom = 17.5
+text = "G"
+
+[node name="g_slider" type="HSlider" parent="color_sliders_box/g_container"]
+margin_left = 17.0
+margin_right = 192.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 175, 0 )
+max_value = 255.0
+
+[node name="value" type="Label" parent="color_sliders_box/g_container"]
+margin_left = 196.0
+margin_top = -1.0
+margin_right = 226.0
+margin_bottom = 17.5
+text = "255"
+
+[node name="b_container" type="HBoxContainer" parent="color_sliders_box"]
+margin_top = 44.0
+margin_right = 231.0
+margin_bottom = 62.0
+
+[node name="Label" type="Label" parent="color_sliders_box/b_container"]
+margin_top = -1.0
+margin_right = 11.0
+margin_bottom = 17.5
+text = "B"
+
+[node name="b_slider" type="HSlider" parent="color_sliders_box/b_container"]
+margin_left = 15.0
+margin_right = 190.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 175, 0 )
+max_value = 255.0
+
+[node name="value" type="Label" parent="color_sliders_box/b_container"]
+margin_left = 194.0
+margin_top = -1.0
+margin_right = 224.0
+margin_bottom = 17.5
+text = "255"
+
+[node name="add_to_pallete_button" type="Button" parent="."]
+anchor_left = 0.701657
+anchor_top = 0.0884354
+anchor_right = 0.966851
+anchor_bottom = 0.435374
+custom_fonts/font = SubResource( 1 )
+text = "Add to palette"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[connection signal="value_changed" from="color_sliders_box/r_container/r_slider" to="." method="_on_r_slider_value_changed"]
+[connection signal="value_changed" from="color_sliders_box/g_container/g_slider" to="." method="_on_g_slider_value_changed"]
+[connection signal="value_changed" from="color_sliders_box/b_container/b_slider" to="." method="_on_b_slider_value_changed"]

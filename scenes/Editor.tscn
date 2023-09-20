@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scripts/camera.gd" type="Script" id=1]
 [ext_resource path="res://scripts/exporter.gd" type="Script" id=2]
 [ext_resource path="res://scripts/Editor.gd" type="Script" id=3]
 [ext_resource path="res://scripts/GUI.gd" type="Script" id=4]
 [ext_resource path="res://assets/models/wireframe.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://resources/main_theme.tres" type="Theme" id=6]
 
 [sub_resource type="QuadMesh" id=4]
 size = Vector2( 2, 2 )
@@ -270,7 +271,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=6]
 shader = SubResource( 5 )
-shader_param/outlineColor = Color( 0, 0, 0, 0.780392 )
+shader_param/outlineColor = Color( 0, 0, 0, 0.78 )
 shader_param/depth_threshold = 0.025
 shader_param/normal_threshold = 0.5
 shader_param/normal_smoothing = 0.25
@@ -281,6 +282,20 @@ shader_param/min_distance = 2.0
 shader_param/grazing_fresnel_power = 5.0
 shader_param/grazing_angle_mask_power = 1.0
 shader_param/grazing_angle_modulation_factor = 50.0
+
+[sub_resource type="Theme" id=14]
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.270588, 0.172549, 0.172549, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="ProceduralSky" id=1]
 sky_top_color = Color( 0.152941, 0.176471, 0.2, 1 )
@@ -295,8 +310,15 @@ background_mode = 2
 background_sky = SubResource( 1 )
 background_color = Color( 1, 1, 1, 1 )
 tonemap_mode = 2
+auto_exposure_scale = 0.25
+auto_exposure_max_luma = 0.7
+auto_exposure_speed = 30.0
 ssao_enabled = true
 ssao_quality = 2
+dof_blur_far_distance = 30.0
+dof_blur_far_transition = 317.06
+dof_blur_far_quality = 2
+dof_blur_near_quality = 2
 
 [sub_resource type="CubeMesh" id=9]
 size = Vector3( 0.1, 0.1, 0.1 )
@@ -339,14 +361,13 @@ material/0 = SubResource( 6 )
 use_collision = true
 script = ExtResource( 2 )
 
-[node name="CSGBox" type="CSGBox" parent="model"]
-
 [node name="GUI" type="CanvasLayer" parent="."]
 script = ExtResource( 4 )
 
 [node name="ui" type="Control" parent="GUI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 6 )
 
 [node name="left_panel" type="Panel" parent="GUI/ui"]
 anchor_bottom = 1.0
@@ -361,43 +382,42 @@ margin_right = 150.0
 margin_bottom = -18.0
 
 [node name="color_label" type="Label" parent="GUI/ui/left_panel/select_color_container"]
-margin_top = 13.0
-margin_right = 32.0
-margin_bottom = 27.0
+margin_top = 10.0
+margin_right = 44.0
+margin_bottom = 29.0
 text = "color"
 
 [node name="voxel_color_picker" type="ColorPickerButton" parent="GUI/ui/left_panel/select_color_container"]
-margin_left = 36.0
-margin_right = 136.0
+margin_left = 48.0
+margin_right = 148.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 100, 30 )
 color = Color( 0.603922, 0.603922, 0.603922, 1 )
 
 [node name="brush_mode_buttons" type="VBoxContainer" parent="GUI/ui/left_panel"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -26.5
-margin_top = -111.0
-margin_right = 26.5
-margin_bottom = -71.0
+anchor_left = 0.592179
+anchor_top = 0.185
+anchor_right = 0.899441
+anchor_bottom = 0.293333
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="attach_mode_button" type="Button" parent="GUI/ui/left_panel/brush_mode_buttons"]
-margin_right = 53.0
-margin_bottom = 20.0
+margin_right = 55.0
+margin_bottom = 19.0
 text = "Attach"
 
 [node name="erase_mode_button" type="Button" parent="GUI/ui/left_panel/brush_mode_buttons"]
-margin_top = 24.0
-margin_right = 53.0
-margin_bottom = 44.0
+margin_top = 23.0
+margin_right = 55.0
+margin_bottom = 42.0
 text = "Erase"
 
 [node name="paint_mode_button" type="Button" parent="GUI/ui/left_panel/brush_mode_buttons"]
-margin_top = 48.0
-margin_right = 53.0
-margin_bottom = 68.0
+margin_top = 46.0
+margin_right = 55.0
+margin_bottom = 65.0
 text = "Paint"
 
 [node name="reload_model_button" type="Button" parent="GUI/ui/left_panel"]
@@ -409,6 +429,41 @@ text = "Reload model"
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
+[node name="colors_list_panel" type="Panel" parent="GUI/ui/left_panel"]
+anchor_left = 0.0782123
+anchor_top = 0.356667
+anchor_right = 0.932961
+anchor_bottom = 0.765
+theme = SubResource( 14 )
+custom_styles/panel = SubResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="colors_grid" type="GridContainer" parent="GUI/ui/left_panel/colors_list_panel"]
+anchor_left = 0.0130719
+anchor_right = 1.01307
+anchor_bottom = 1.0
+margin_left = 7.0
+margin_top = 9.0
+margin_right = -10.0
+margin_bottom = -12.0
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="GUI/ui/left_panel/colors_list_panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -27.5
+margin_top = -18.0
+margin_right = 27.5
+margin_bottom = 0.5
+text = "Colors"
+align = 1
+valign = 1
 
 [node name="right_panel" type="Panel" parent="GUI/ui"]
 anchor_left = 1.0
@@ -443,23 +498,26 @@ margin_bottom = 20.0
 
 [node name="selectViewMode" type="OptionButton" parent="GUI/ui/up_panel/buttons"]
 margin_right = 76.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 text = "Normal"
 items = [ "Normal", null, false, 0, null, "Wireframe", null, false, 1, null ]
 selected = 0
 
 [node name="is_outline" type="CheckButton" parent="GUI/ui/up_panel/buttons"]
 margin_left = 80.0
-margin_right = 208.0
-margin_bottom = 40.0
+margin_right = 195.0
+margin_bottom = 48.0
 text = "Outline"
 
 [node name="workspace_area" type="ColorRect" parent="GUI/ui"]
-margin_left = 180.0
-margin_top = 73.0
-margin_right = 823.0
-margin_bottom = 601.0
+anchor_left = 0.175781
+anchor_top = 0.121667
+anchor_right = 0.803711
+anchor_bottom = 1.00167
 color = Color( 0.270588, 0.270588, 0.270588, 0.054902 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
@@ -485,7 +543,7 @@ material/0 = SubResource( 10 )
 [node name="CollisionShape" type="CollisionShape" parent="wireframe/StaticBody"]
 shape = SubResource( 11 )
 
-[connection signal="color_changed" from="GUI/ui/left_panel/select_color_container/voxel_color_picker" to="GUI" method="_on_voxel_color_picker_color_changed"]
+[connection signal="popup_closed" from="GUI/ui/left_panel/select_color_container/voxel_color_picker" to="GUI" method="_on_voxel_color_picker_popup_closed"]
 [connection signal="pressed" from="GUI/ui/left_panel/brush_mode_buttons/attach_mode_button" to="GUI" method="_on_attach_mode_button_pressed"]
 [connection signal="pressed" from="GUI/ui/left_panel/brush_mode_buttons/erase_mode_button" to="GUI" method="_on_erase_mode_button_pressed"]
 [connection signal="pressed" from="GUI/ui/left_panel/brush_mode_buttons/paint_mode_button" to="GUI" method="_on_paint_mode_button_pressed"]

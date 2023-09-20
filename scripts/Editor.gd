@@ -10,6 +10,10 @@ var voxel_color: Color = Color(255,255,255)
 var collision_point:Vector3
 var collision_normal:Vector3
 
+func get_active_color() -> Color:
+	return voxel_color
+func set_active_color(color: Color) -> void:
+	voxel_color = color
 func _input(e) -> void:
 	if is_workspace_active:
 
@@ -36,7 +40,6 @@ func _input(e) -> void:
 						
 			if cursor_position:  _emit_cursor_position(cursor_position, cursor_normal)
 		else: $cursor.translation = Vector3(0,255,0)
-	
 func raycast_from_mouse(mouse_position: Vector2, collision_mask) -> Dictionary:
 	var ray_start = camera.project_ray_origin(mouse_position)
 	var ray_end: Vector3 = ray_start + camera.project_ray_normal(mouse_position) * 10

@@ -9,6 +9,7 @@ var matcont = "" #.mat content
 
 var model = []
 var prev_model = []
+var materials = []
 var voxel_scale = 0.1
 
 func update_model():
@@ -28,19 +29,22 @@ func create_voxel(pos: Vector3, color: Color):
 	apply_color_to_voxel(voxel, color)
 	add_child(voxel)
 func apply_color_to_voxel(voxel: CSGBox, color: Color) -> void:
-	# Material
+	for material in materials:
+		if color == material.albedo_color:
+			voxel.material = material
+			return
 	var voxel_material = SpatialMaterial.new()
 	voxel_material.albedo_color = color
 	voxel.material = voxel_material
+	materials.append(voxel_material)
+	return
 func add_voxel(pos: Vector3, color:Color):
 	prev_model = []
 	prev_model.append_array(model)
 	
 	create_voxel(pos*voxel_scale, color)
 	model.append([pos.x, pos.y, pos.z, color.r, color.g, color.b])
-	
-	
-	
+
 	#update_model()
 func remove_voxel(pos: Vector3) -> void:
 	if get_voxel_in_model(pos) != null:
@@ -54,7 +58,6 @@ func paint_voxel(pos: Vector3, color: Color) -> void:
 	index[4] = color.g 
 	index[5] = color.b
 	apply_color_to_voxel(get_voxel_in_tree(pos), color)
-
 func get_voxel_in_tree(pos: Vector3):
 	for i in get_children():
 		var i_pos = i.translation
@@ -160,4 +163,3 @@ func exportcsg():
 	#output message
 	print("CSG Mesh Exported")
 
-		
