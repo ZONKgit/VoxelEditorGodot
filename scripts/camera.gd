@@ -17,7 +17,7 @@ func _input(event) -> void:
 	if Input.is_action_pressed("select"):
 		if event is InputEventMouseMotion:
 			rotation.y -= event.relative.x * sensivity
-			rotation.x = clamp(rotation.x-event.relative.y * sensivity, -1.4, 1.4)
+			rotation.x = clamp(rotation.x-event.relative.y * sensivity, -PI/2, PI/2)
 	
 	if event is InputEventMouseButton:
 		if event.pressed:

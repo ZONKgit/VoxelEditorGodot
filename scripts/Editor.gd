@@ -10,6 +10,9 @@ var voxel_color: Color = Color(255,255,255)
 var collision_point:Vector3
 var collision_normal:Vector3
 
+func _ready():
+	vox_parser()
+
 func get_active_color() -> Color:
 	return voxel_color
 func set_active_color(color: Color) -> void:
@@ -55,6 +58,31 @@ func _get_proper_position(raw_position: Vector3, normal: Vector3) -> Vector3:
 	var position = raw_position
 	position = position.snapped(Vector3.ONE)
 	return position - normal / 2
+func vox_parser() -> void:
+	var file = File.new()
+	if file.open("res://vox/3x3x3.vox", File.READ) == OK:
+		var version = file.get_32()  # Версия формата .vox
+		var modelSizeX = file.get_32()  # Размер модели по X
+		var modelSizeY = file.get_32()  # Размер модели по Y
+		var modelSizeZ = file.get_32()  # Размер модели по Z
+		file.close()
+
+		# Преобразование данных в правильный порядок байтов
+		version = swap_endian(version)
+		modelSizeX = swap_endian(modelSizeX)
+		modelSizeY = swap_endian(modelSizeY)
+		modelSizeZ = swap_endian(modelSizeZ)
+
+		print("Версия формата .vox:", version)
+		print("Размер модели по X:", modelSizeX)
+		print("Размер модели по Y:", modelSizeY)
+		print("Размер модели по Z:", modelSizeZ)
+	else:
+		# Обработайте ошибку открытия файла
+		pass
+
+func swap_endian(value):
+	return (value >> 24) | ((value >> 8) & 0xFF00) | ((value << 8) & 0xFF0000) | (value << 24)
 
 
 

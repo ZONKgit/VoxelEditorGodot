@@ -1,50 +1,52 @@
-[gd_resource type="Theme" load_steps=10 format=2]
+[gd_resource type="Theme" load_steps=14 format=2]
 
 [ext_resource path="res://resources/fonts/main_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/icons/switch_on.png" type="Texture" id=2]
 [ext_resource path="res://assets/icons/switch_off.png" type="Texture" id=3]
+[ext_resource path="res://assets/icons/radio_unchecked.png" type="Texture" id=4]
+[ext_resource path="res://assets/icons/radio_checked.png" type="Texture" id=5]
 
 [sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.239216, 0.352941, 0.501961, 1 )
+bg_color = Color( 0.905882, 0.498039, 0.0666667, 1 )
 corner_radius_top_left = 2
 corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
-shadow_size = 1
-shadow_offset = Vector2( 2, 2 )
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.239216, 0.352941, 0.501961, 1 )
+bg_color = Color( 0.952941, 0.623529, 0.105882, 1 )
 corner_radius_top_left = 2
 corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
-shadow_size = 1
-shadow_offset = Vector2( 1, 1 )
 
 [sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.239216, 0.352941, 0.501961, 0.498039 )
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-shadow_size = 1
-shadow_offset = Vector2( 1, 1 )
+bg_color = Color( 0.952941, 0.623529, 0.105882, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
 
 [sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.239216, 0.352941, 0.501961, 1 )
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-shadow_size = 1
-shadow_offset = Vector2( 1, 1 )
+bg_color = Color( 0.952941, 0.623529, 0.105882, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.160784, 0.196078, 0.254902, 1 )
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.4, 0.4, 0.4, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+shadow_size = 2
+shadow_offset = Vector2( 0, 1 )
 
 [resource]
 Button/fonts/font = ExtResource( 1 )
@@ -57,3 +59,7 @@ CheckButton/styles/normal = SubResource( 6 )
 Label/fonts/font = ExtResource( 1 )
 Label/styles/normal = SubResource( 2 )
 Panel/styles/panel = SubResource( 3 )
+PopupMenu/icons/radio_checked = ExtResource( 5 )
+PopupMenu/icons/radio_unchecked = ExtResource( 4 )
+PopupMenu/styles/hover = SubResource( 8 )
+PopupMenu/styles/panel = SubResource( 7 )

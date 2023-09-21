@@ -287,11 +287,10 @@ shader_param/grazing_angle_modulation_factor = 50.0
 
 [sub_resource type="StyleBoxFlat" id=15]
 bg_color = Color( 0, 0, 0, 0 )
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color( 0.270588, 0.172549, 0.172549, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -494,6 +493,45 @@ margin_top = -72.0
 margin_right = 92.0
 margin_bottom = -20.0
 text = "Export to obj"
+
+[node name="projects_list" type="Panel" parent="GUI/ui/right_panel"]
+anchor_left = 0.0792079
+anchor_top = 0.358333
+anchor_right = 0.933957
+anchor_bottom = 0.766666
+theme = ExtResource( 6 )
+custom_styles/panel = SubResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="GUI/ui/right_panel/projects_list"]
+anchor_top = -0.077551
+anchor_right = 1.0
+text = "Projects"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="GUI/ui/right_panel/projects_list"]
+anchor_left = 0.0521258
+anchor_top = 0.0326531
+anchor_right = 0.95564
+anchor_bottom = 0.967348
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/ui/right_panel/projects_list/ScrollContainer"]
+margin_right = 128.0
+margin_bottom = 19.0
+
+[node name="Button" type="Button" parent="GUI/ui/right_panel/projects_list/ScrollContainer/VBoxContainer"]
+margin_right = 128.0
+margin_bottom = 19.0
+text = "test cube 3x3x3"
 
 [node name="up_panel" type="Panel" parent="GUI/ui"]
 anchor_right = 1.0
