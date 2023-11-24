@@ -1,5 +1,8 @@
 extends CSGCombiner
 
+onready var gui = $"../GUI"
+onready var editor = $".."
+
 var button_csg = Button.new()
 var object_name = ""
 var obj = null
@@ -8,10 +11,54 @@ var objcont = "" #.obj content
 var matcont = "" #.mat content
 
 var model = []
+var colors = []
 var prev_model = []
 var materials = []
 var voxel_scale = 0.1
 
+func _ready():
+	update_model()
+	obj = self
+	object_name = name
+func load_project(filename: String) -> void:
+	print('loaded:'+filename)
+	var save_project = File.new()
+	save_project.open("res://"+editor.projects_folder+"/"+filename, File.READ)
+	var data = parse_json(save_project.get_as_text())
+	
+	model = data.model
+	
+	print(data.colors)
+	colors = data.colors
+	
+	# Удаление цветов из палитры
+	gui.remove_all_colors_in_pallete()
+	
+	# Добавление цветов в палитру
+	for color in data.colors:
+		var added_color = Color(color[0], color[1], color[2], color[3])
+		gui.add_color_to_pallete(added_color)
+	
+	save_project.close()
+	update_model()
+
+func save_project(filename: String = 'empty') -> void:
+	var save_file = File.new()
+	save_file.open("res://"+editor.projects_folder+"/"+filename+".ve", File.WRITE)
+	var new_colors = []
+	for color in colors:
+		var new_color = []
+		new_color.append(color.r)
+		new_color.append(color.g)
+		new_color.append(color.b)
+		new_color.append(color.a)
+		new_colors.append(new_color)
+	
+	save_file.store_string(to_json({
+		"model" : model,
+		"colors" : new_colors
+		}))
+	save_file.close()
 func update_model():
 	for child in get_children():
 		child.queue_free()
@@ -35,6 +82,7 @@ func apply_color_to_voxel(voxel: CSGBox, color: Color) -> void:
 			return
 	var voxel_material = SpatialMaterial.new()
 	voxel_material.albedo_color = color
+	voxel_material.flags_unshaded = true
 	voxel.material = voxel_material
 	materials.append(voxel_material)
 	return
@@ -49,6 +97,9 @@ func add_voxel(pos: Vector3, color:Color):
 func remove_voxel(pos: Vector3) -> void:
 	if get_voxel_in_model(pos) != null:
 		model.remove(get_voxel_in_model(pos))
+		if !get_voxel_in_tree(pos):
+			update_model()
+			return
 		get_voxel_in_tree(pos).queue_free()
 		#update_model()
 func paint_voxel(pos: Vector3, color: Color) -> void:
@@ -58,12 +109,12 @@ func paint_voxel(pos: Vector3, color: Color) -> void:
 	index[4] = color.g 
 	index[5] = color.b
 	apply_color_to_voxel(get_voxel_in_tree(pos), color)
-func get_voxel_in_tree(pos: Vector3):
+func get_voxel_in_tree(pos: Vector3): # Получение вокселя как объект в древе сцены
 	for i in get_children():
 		var i_pos = i.translation
 		if i_pos == pos*voxel_scale:
 			return i
-func get_voxel_in_model(pos: Vector3):
+func get_voxel_in_model(pos: Vector3): # Получит воксель как оъект массива
 	var index = 0
 	for i in model:
 		var i_pos = Vector3(i[0], i[1], i[2])
@@ -75,11 +126,7 @@ func undo():
 	update_model()
 func _input(event):
 	if Input.is_action_just_pressed("undo"): undo()
-func _ready():
-	update_model()
-	obj = self
-	object_name = name
-func exportcsg():
+func exportcsg(filename: String = "", is_reate_folder: bool = true):
 	#Variables
 	objcont = "" #.obj content
 	matcont = "" #.mat content
@@ -147,19 +194,27 @@ func exportcsg():
 		matcont+=str("d ",mat.albedo_color.a)+"\n"
 		
 
-	
-	var path = 'exports'
+	var path: String
+	if is_reate_folder:
+		var dir = Directory.new()
+		dir.make_dir('exports/'+str(filename))
+		path = 'exports/'+str(filename)
+	else:
+		path = 'exports'
 	
 	var objfile = File.new()
-	objfile.open(path+"/"+object_name+".obj", File.WRITE)
+	objfile.open(path+"/"+filename+".obj", File.WRITE)
 	objfile.store_string(objcont)
 	objfile.close()
 
 	var mtlfile = File.new()
-	mtlfile.open(path+"/"+object_name+".mtl", File.WRITE)
+	mtlfile.open(path+"/"+filename+".mtl", File.WRITE)
 	mtlfile.store_string(matcont)
 	mtlfile.close()
 
 	#output message
-	print("CSG Mesh Exported")
+	print("CSG Mesh Exported: "+str(path+"/"+filename+".obj"))
+	return str(path+"/"+filename+".obj");
+
+
 

@@ -2,7 +2,9 @@ extends Spatial
 
 onready var camera = $camera/camera
 onready var model = $model
+onready var gui = $GUI
 
+var projects_folder = "projects"
 var is_workspace_active = true
 var viewMode = "Normal"
 var brush_mode = "Attach" # Attach-Добавление Erase-Удаление Paint-Рисование
@@ -12,6 +14,12 @@ var collision_normal:Vector3
 
 func _ready():
 	vox_parser()
+	
+	#Настройка рабочего простарнства
+	var default_color = "#ffffff"
+	set_active_color(default_color)
+	gui.add_color_to_pallete(default_color)
+	
 
 func get_active_color() -> Color:
 	return voxel_color
@@ -31,6 +39,7 @@ func _input(e) -> void:
 			
 			$cursor.translation = new_voxel_pos
 			$remove_cursor.translation = voxel_pos
+			
 			
 			if Input.is_action_just_pressed("attach"):
 				match brush_mode:
@@ -83,6 +92,5 @@ func vox_parser() -> void:
 
 func swap_endian(value):
 	return (value >> 24) | ((value >> 8) & 0xFF00) | ((value << 8) & 0xFF0000) | (value << 24)
-
 
 
